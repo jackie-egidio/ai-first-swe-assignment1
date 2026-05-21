@@ -50,17 +50,14 @@ assignment1/
 │   ├── Dockerfile               # Docker container configuration
 │   └── test_request.json        # Sample API request
 │
+├── EDA Analysis
+│   └── results_eda_notebook.ipynb  # Phase 4 exploratory data analysis
+│
 ├── Deployment Guides
 │   └── DOCKER_DEPLOYMENT.md     # Local Docker deployment
 │
 ├── docs/
-│   └── ARCHITECTURE_DIAGRAM_GUIDE.md  # Diagram creation guide
-│
-├── screenshots/                 # All assignment screenshots
-│   ├── bigquery_model_evaluation_phase2_results.png
-│   ├── bigquery_model_explanation_phase2_results.png
-│   ├── cloud_run_service_deployment_phase3.png
-│   └── smoke_test_5_requests_phase3.png
+│   └── ARCHITECTURE_DIAGRAM_GUIDE.md  # Architecture decisions document
 │
 └── .gitignore                   # Git ignore configuration
 ```
@@ -446,14 +443,14 @@ Cloud Run service is deployed with authentication required. Always include the B
 - [ ] Screenshot of smoke test output (5 requests, HTTP 200, with `predicted_label`)
 
 ### Phase 4: EDA Notebook
-- [ ] Jupyter notebook with analysis
+- [ ] `results_eda_notebook.ipynb` - Exploratory data analysis
 - [ ] Correlation heatmap
 - [ ] Distribution plots
 - [ ] Missing value analysis
 - [ ] 5+ observations
 
 ### Phase 5: Architecture Diagram
-- [ ] `docs/architecture.png` with data flow, IAM, CI/CD patterns
+- [ ] `docs/ARCHITECTURE_DIAGRAM_GUIDE.md` - Architecture decisions and justifications
 
 ---
 
@@ -513,17 +510,6 @@ gcloud run deploy $IMAGE_NAME \
 # Get URL
 gcloud run services describe $IMAGE_NAME --region $REGION --format="value(status.url)"
 ```
-
----
-
-## Next Steps
-
-1. ✅ Complete Phase 2: BigQuery ML model training and evaluation
-2. ✅ Complete Phase 3: Deploy FastAPI inference API
-3. 📝 Complete Phase 4: EDA Jupyter notebook
-4. 📝 Complete Phase 5: Architecture diagram
-5. 📦 Package all files and screenshots for submission
-
 ---
 
 ## Support
